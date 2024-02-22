@@ -1,9 +1,15 @@
 import { Sequelize } from "sequelize";
 
-export const sequelize = new Sequelize("blog-system", "root", "", {
-  host: "localhost",
-  dialect: "mysql",
-});
+export const sequelize = new Sequelize(
+  "freedb_blog-system-db",
+  "freedb_salahuser",
+  "WW4G8KzmJYWYs$u",
+  {
+    host: "sql.freedb.tech",
+    port: 3306,
+    dialect: "mysql",
+  }
+);
 
 export const connectDB = async () => {
   try {
