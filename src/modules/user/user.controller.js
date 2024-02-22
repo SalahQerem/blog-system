@@ -6,11 +6,6 @@ export const getUser = async (req, res) => {
   try {
     const users = await userModel.findAll({
       include: blogModel,
-      where: {
-        age: {
-          [Op.gte]: 20,
-        },
-      },
     });
     return res.json({ message: "success", users });
   } catch (error) {
